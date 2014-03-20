@@ -13,7 +13,7 @@
         , y = this.game.height / 2;
 
 
-      this.titleTxt = this.add.bitmapText(x, y, 'minecraftia', 'Bleh', 16);
+      this.titleTxt = this.add.bitmapText(x, y, 'minecraftia', 'Otro texto', 16);
       
       
 
