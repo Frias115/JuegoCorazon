@@ -11,13 +11,48 @@
       var x = this.game.width / 2
         , y = this.game.height / 2;
 
-      this.player = this.add.sprite(x, y, 'player');
+    this.game.physics.startSystem(Phaser.Physics.ARCADE);  
+
+    this.map = this.game.add.tilemap('level');
+
+    this.map.setCollisionByExclusion([0]);
+
+    this.layer = this.map.createLayer('Tile Layer 1');
+
+    this.layer.resizeWorld();
+
+    this.game.physics.arcade.gravity.y = 250;
+
+      /*this.player = this.add.sprite(x, y, 'player');
       this.player.anchor.setTo(0.5, 0.5);
-      this.input.onDown.add(this.onInputDown, this);
+      this.input.onDown.add(this.onInputDown, this);*/
+
+    this.player = this.add.sprite(x,y, 'player')
+    this.game.physics.enable(this.player, Phaser.Physics.ARCADE);
+
+    this.player.body.collideWorldBounds = true;
+    this.player.body.setSize(20, 32, 5, 16);
+
+    this.game.camera.follow(this.player);
+
+
     },
 
     update: function () {
-      var x, y, cx, cy, dx, dy, angle, scale;
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      /*var x, y, cx, cy, dx, dy, angle, scale;
 
       x = this.input.position.x;
       y = this.input.position.y;
@@ -32,11 +67,11 @@
       scale = Math.sqrt(dx * dx + dy * dy) / 100;
 
       this.player.scale.x = scale * 0.6;
-      this.player.scale.y = scale * 0.6;
+      this.player.scale.y = scale * 0.6;*/
     },
 
     onInputDown: function () {
-      this.game.state.start('menu');
+     
     }
 
   };

@@ -14,7 +14,12 @@
 
       this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
       this.load.setPreloadSprite(this.asset);
-      this.load.image('player', 'assets/player.png');
+      this.load.tilemap('level', 'assets/level.json', null, Phaser.Tilemap.TILED_JSON);
+      this.load.image('player', 'assets/cell.png');
+      this.load.image('enemy' , 'assets/virus.png');
+      this.load.image('tiles1', 'assets/pared.png');
+      this.load.image('tiles2', 'assets/paredv.png');
+      this.load.image('tiles3', 'assets/paredv2.png');
       this.load.bitmapFont('minecraftia', 'assets/minecraftia.png', 'assets/minecraftia.xml');
     },
 
