@@ -11,15 +11,22 @@
       var x = this.game.width / 2
         , y = this.game.height / 2;
 
-    this.game.physics.startSystem(Phaser.Physics.ARCADE);  
 
-    this.map = this.game.add.tilemap('level');
 
-    this.map.setCollisionByExclusion([0]);
+     this.game.add.sprite(0, 0,'background');
 
-    this.layer = this.map.createLayer('Tile Layer 1');
+     this.game.add.sprite(0, 0,'paredes');
 
-    this.layer.resizeWorld();
+
+     
+    //var map;
+    //var layer;
+
+    //map = this.add.tilemap('mario');
+    //map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
+    //layer = map.createLayer('World1');
+    //layer.resizeWorld();
+    
 
     this.game.physics.arcade.gravity.y = 250;
 
@@ -34,6 +41,8 @@
     this.player.body.setSize(20, 32, 5, 16);
 
     this.game.camera.follow(this.player);
+
+
 
 
     },
