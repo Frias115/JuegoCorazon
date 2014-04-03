@@ -16,11 +16,15 @@
       this.load.setPreloadSprite(this.asset);
       this.load.image('player', 'assets/cell.png');
       this.load.image('enemy' , 'assets/virus.png');
+      this.load.image('heart', 'assets/heart.png');
+      this.load.image('paredinv', 'assets/paredinv.png');
+      this.load.image('bullet', 'assets/bullet.png');
+      this.load.tilemap('map', 'assets/level.json', null, Phaser.Tilemap.TILED_JSON);
+      this.load.image('pared', 'assets/pared.png');
+      this.load.image('paredv', 'assets/paredv.png');
+      this.load.image('paredv2', 'assets/paredv2.png');
       this.load.bitmapFont('minecraftia', 'assets/minecraftia.png', 'assets/minecraftia.xml');
-      //this.load.tilemap('mario', 'assets/level.json', null, Phaser.Tilemap.TILED_JSON);
-      //this.load.image('tiles', 'assets/super_mario.png');
-      this.load.image('background', 'assets/background juego.png');
-      this.load.image('paredes', 'assets/paredes juego.png');
+      this.load.image('background', 'assets/background.png');
     },
 
     create: function () {
